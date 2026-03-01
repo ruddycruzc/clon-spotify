@@ -2,89 +2,200 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+
+body {
     font-family: "arial", sans-serif;
 }
 
-body {
-    background-color: whitesmoke;
+.logo {
+    text-align: left;
+}
 
+.logo img {
+    width: auto;
+    height: 30px;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-
+    padding: 1rem;
+    width: 100%;
 
 }
 
 .menu {
-    display: flex;
+    /*oculto en mobile*/
+    display: none;
     list-style: none;
-    gap: 20 px;
+    gap: 20px;
 }
+
 
 .menu a {
     text-decoration: none;
     color: black;
     font-weight: 500;
 
-}
-
-.logo {
-    display: flex;
 
 }
+
 
 .hero {
 
-    height: 80vh;
+    width: 100%;
+    padding: 4rem 1rem;
     background-image: url(assets/landing.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     color: white;
 
 }
 
-.hero-content h1{
-    font-size: 60px;
-    margin-bottom: 20px;
-}
-
-.hero-content p{
-    font-size: 20px;
-    max-width: 700px;
+.hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 1rem;
 
 }
 
-.info{
-    padding: 60px;
+.hero-content p {
+    width: 100;
+    margin: 0;
     text-align: center;
 }
 
-.info h2{
-    font-size: 30px;
-    margin-bottom: 60px;
+
+
+.info {
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.info h2 {
+    font-size: 3rem;
     position: relative;
     display: inline-block;
-}
-.info-container{
-    background-color:white;
-    padding: 80px 50px;
-    text-align: center;
+    padding-bottom: 1rem;
+    text-decoration: underline;
+    text-decoration-color: #1db954;
+
 }
 
-.info h2::after{
-    content: "";
-    width: 60px;
-    height: 3px;
-    background-color: ##1db954;
-    display: block;
-    margin:10 px auto:0;
+
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+
+
+
+
+.info-container img {
+    width: 80px;
+    margin-bottom: 1rem;
+
+}
+
+.info-container h3 {
+    color: #1db954;
+
+}
+
+.info-container p {
+    color: #b3b3b3;
+}
+
+.promo {
+    background-color: #1db954;
+
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    /*column on mobile*/
+    gap: 3rem;
+
+
+}
+
+.article p {
+    width: 100%;
+    padding: 3rem 0;
+
+
+}
+
+
+
+.promo h2 {
+    text-decoration: underline;
+    padding: 2rem;
+
+}
+
+
+.separation img {
+    display: none;
+
+
+}
+
+.app-image img {
+    display: none;
+    width: 50%;
+
+}
+
+@media (min-width: 1024px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        align-content:
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+    .info h2 {
+        display: flex;
+        align-content: center;
+
+
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+    }
+.article{
+    flex-direction: row;
+    justify-content: space-between;
     
+}
+.app-image img{
+    display: block;
+    width: 50%;
+}
+.app-image{
+    display: flex;
+justify-content: flex-end;
+width: 50%;
+}
+
 }

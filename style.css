@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: url((https://fonts.google.com/specimen/Montserrat))
+}
+
+
+.logo {
+    text-align: left;
+}
+
+.logo img {
+    width: auto;
+    height: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+
+}
+
+.menu {
+    /*oculto en mobile*/
+    display: none;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+
+
+}
+
+
+.hero {
+
+    width: 100%;
+    padding: 4rem 1rem;
+    background-image: url(assets/landing.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 1rem;
+
+}
+
+.hero-p p {
+    width: 100;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+
+
+
+.info {
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.info h2 {
+    
+    position: relative;
+
+    font-size: 1.5rem;
+    border-bottom: 4px solid #1db954;
+    display: inline-block;
+    gap: 1rem;
+
+}
+
+
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
+
+
+
+
+.info-container img {
+    width: 80px;
+    margin-bottom: 1rem;
+
+}
+
+.info-container h3 {
+    color: #1db954;
+
+}
+
+.info-container p {
+    color: #b3b3b3;
+}
+
+.promo {
+    background-color: #1db954;
+
+    color: white;
+    padding: 3rem 1rem;
+    margin: 2rem;
+
+}
+
+.promo-item {
+    margin-bottom: 1.5rem;
+}
+
+
+.article {
+    display: flex;
+    flex-direction: column;
+    /*column on mobile*/
+    gap: 3rem;
+
+
+}
+
+.article p {
+    width: 100%;
+    padding: 3rem 0;
+
+}
+
+
+
+.promo h2 {
+    text-decoration: underline;
+    padding: 2rem;
+
+}
+
+.promo-item h3 {
+    margin-bottom: 1rem;
+
+}
+
+.separation {
+    display: none;
+
+
+}
+
+.app-image img {
+    display: none;
+    width: 50%;
+
+}
+
+@media (min-width: 1024px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+    }
+
+
+
+    .hamburger {
+        display: none;
+    }
+    .menu{
+        display: flex;
+
+    }
+
+    
+    .hero {
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding:     0 1rem;
+    }
+
+    .hero-content {
+        width: 100%;
+
+
+    }
+
+
+    .info h2 {
+        font-size: 2.5rem;
+        border-bottom: 4px solid #1db954;
+        display: inline-block;
+
+
+
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        /*Centrarlo verticalmente*/
+        gap: 2rem;
+
+
+    }
+
+    .article p {
+        width: 40%;
+
+    }
+
+    .separation {
+        display: flex;
+        width: 10%;
+        justify-content: center;
+    }
+
+    .separation img {
+        display: block;
+        width: 60px;
+    }
+
+    .app-image {
+        display: block;
+
+        justify-content: flex-end;
+        width: 40%;
+    }
+
+    .app-image img {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+    }
+}

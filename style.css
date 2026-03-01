@@ -10,6 +10,7 @@ body {
     font-family: "arial", sans-serif;
 }
 
+
 .logo {
     text-align: left;
 }
@@ -66,6 +67,7 @@ body {
 .hero-content p {
     width: 100;
     margin: 0;
+    display:block;
     text-align: center;
 }
 
@@ -78,7 +80,7 @@ body {
 }
 
 .info h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     position: relative;
     display: inline-block;
     padding-bottom: 1rem;
@@ -147,7 +149,7 @@ body {
 }
 
 
-.separation img {
+.separation{
     display: none;
 
 
@@ -160,14 +162,25 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .menu {
+    .navbar {
         display: flex;
         flex-direction: row;
-        align-content:
+        align-content: flex-end;
     }
+
+    
 
     .hamburger {
         display: none;
+    }
+
+    .hero{
+        width: 100%;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding; 0 1rem;
     }
 
 
@@ -183,19 +196,43 @@ body {
         flex-direction: row;
         align-content: space-between;
     }
-.article{
-    flex-direction: row;
-    justify-content: space-between;
-    
-}
-.app-image img{
-    display: block;
-    width: 50%;
-}
-.app-image{
-    display: flex;
-justify-content: flex-end;
-width: 50%;
-}
 
+    .article {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /*Centrarlo verticalmente*/
+        gap: 2 rem;
+
+
+    }
+
+    .article p {
+        width: 40%;
+
+    }
+
+    .separation {
+        display:flex;
+        width: 10%;
+        justify-content: center;
+    }
+    .separation img{
+        display: block;
+        width: 60px;
+    }
+
+    . .app-image {
+        display: flex;
+        
+        justify-content: flex-end;
+        width: 40%;
+    }
+
+    .app-image img {
+        display: block;
+        width: 100%;
+        max-width: 350px;
+    }
 }

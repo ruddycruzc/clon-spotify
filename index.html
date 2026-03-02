@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="assets/spotify-icon-white.png">
     <link rel="stylesheet" href="./style.css">
@@ -20,7 +21,6 @@
 
 <body>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
 
 
@@ -37,33 +37,29 @@
             </div>
 
 
-            <div class="hamburger" id="hamburger">
+            <button class="nav__toggle" 
+            id="navToggle" 
+            aria-label="Abrir menu" 
+            aria-expanded="false"
+            aria-controls="navMenu">
                 ☰
-            </div>
+            </button>
 
-            <ul class="menu" id="menu">
+            <ul class="nav__menu" id="navMenu">
 
-                <li>
-                    <a href="#premium">Premium</a>
+                <li class="nav__item">
+                    <a class="nav__link" href="#premium">Premium</a>
                 </li>
-
-                <li>
-                    <a href="#discover">Discover</a>
+                <li class="nav__item">
+                    <a class="nav__link" href="#discover">Discover</a>
                 </li>
-
-                <li>
-                    <a href="#help">Help</a>
+                <li class="nav__item">
+                    <a class="nav__link" href="#help">Help</a>
                 </li>
-
-                 <li>
-                    <a href="#download">Dowload</a>
+                <li class="nav__item">
+                    <a class="nav__link" href="#download">Download</a>
                 </li>
-
-
-
             </ul>
-
-
 
 
         </nav>
@@ -90,7 +86,7 @@
 
                 <div class="hero-p">
                     <p>
-                        Spotify is now free on mobile, table and computer. Listen to the right music, wherever you are.
+                        Spotify is now free on mobile, tablet and computer. Listen to the right music, wherever you are.
                     </p>
                 </div>
 
@@ -115,7 +111,7 @@
 
                 <div class="info-item">
 
-                    <img src="assets/music-icon.png" alt="Music Icon " </div>
+                    <img src="assets/music-icon.png" alt="Music Icon ">
                     <h3>
                         Millions of songs
                     </h3>
@@ -165,7 +161,7 @@
 
             <div class="promo-layout">
 
-                <article>
+                <article class="promo-content">
 
 
                     <div class="promo-item">
@@ -224,27 +220,7 @@
 
 
 
-
-
-
-
-    <!-- JavaScript for Hamburger Menu -->
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-
-
-
-
-    </script>
-
-
-
-
+    <script src="script.js"></script>
 
 
 

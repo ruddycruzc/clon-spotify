@@ -1,3 +1,19 @@
+:root {
+    --color-brand: #1db954;
+    --color-brand-hover: #1ed760;
+
+    --color-bg-dark: #191414;
+    --color-bg-white: #ffffff;
+
+    --font-size-sm: 0.875rem;
+    --font-weight-medium: 500;
+
+    --spacing-lg: 2rem;
+
+}
+
+
+
 *,
 *::before,
 *::after {
@@ -10,6 +26,8 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: var(--color-bg-white);
+    color: black;
 }
 
 
@@ -27,26 +45,38 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    width: 100%;
-    background-color: white;
-
 }
 
-.menu {
-    /*oculto en mobile*/
+.nav__menu {
     display: none;
     list-style: none;
-    gap: 20px;
-}
-
-
-.menu a {
-    text-decoration: none;
-    color: black;
-
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-dark);
 
 }
 
+.nav__menu--active {
+    display: flex;
+}
+
+.nav__link {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--color-brand);
+}
+
+.nav__toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
 
 .hero {
 
@@ -79,7 +109,11 @@ body {
     padding: 2rem;
     text-align: center;
 
+    background-color: white;
+    color: black;
 }
+
+
 
 .info h2 {
 
@@ -141,7 +175,7 @@ body {
 }
 
 
-.promo article {
+.promo-layout article {
     display: flex;
     flex-direction: column;
     /*column on mobile*/
@@ -150,7 +184,7 @@ body {
 
 }
 
-.article p {
+.promo p {
     width: 100%;
     padding: 3rem 0;
 
@@ -186,29 +220,29 @@ body {
 
 
 
-    .hamburger {
+    .nav__toggle {
         display: none;
     }
 
-    .menu {
-        display: flex !important;
-        position: static;
+    .nav__menu {
+        display: flex;
         flex-direction: row;
-        gap: 2rem;
         background: none;
-        width: auto;
-        padding: 0
+        padding: 0;
+        transition: all 0.3s ease;
     }
 
-    .menu a {
-        color: black;
+    .navbar {
+        position: relative;
     }
 
-
+    .nav__toggle:hover {
+        color: var(--color-brand);
+    }
 
     .hero {
         width: 100%;
-        min-height: 500px;
+        min-height: 600px;
         display: flex;
         align-items: center;
         text-align: center;
@@ -237,9 +271,11 @@ body {
         justify-content: space-around;
         align-items: center;
         padding: 2rem 0;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
-    .promo {
+    .promo-content {
         padding: 6rem 2rem;
         margin: 2rem;
 

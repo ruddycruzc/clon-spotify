@@ -1,3 +1,5 @@
+/*VARIABLES*/
+
 :root {
     --color-brand: #1db954;
     --color-brand-hover: #1ed760;
@@ -12,7 +14,7 @@
 
 }
 
-
+/*RESET*/
 
 *,
 *::before,
@@ -24,16 +26,19 @@
 }
 
 
+/*BASE MOVIL ≥320px */
+
+
 body {
     font-family: "Montserrat", sans-serif;
     background-color: var(--color-bg-white);
     color: black;
 }
 
-
-.logo {
-    text-align: left;
+html {
+    scroll-behavior: smooth;
 }
+
 
 .logo img {
     width: auto;
@@ -53,7 +58,7 @@ body {
     flex-direction: column;
     gap: var(--spacing-lg);
     padding: var(--spacing-lg);
-    background-color: var(--color-bg-dark);
+    background-color: var(--color-bg-white);
 
 }
 
@@ -79,8 +84,6 @@ body {
 }
 
 .hero {
-
-    width: 100%;
     padding: 4rem 1rem;
     background-image: url(assets/landing.jpg);
     background-size: cover;
@@ -96,20 +99,13 @@ body {
 
 }
 
-.hero-p p {
-    width: 100%;
-    margin: 0;
-    display: block;
-    text-align: center;
-}
-
 
 
 .info {
-    padding: 2rem;
+    padding: 3rem 1rem;
     text-align: center;
 
-    background-color: white;
+    background-color: var(--color-bg-white);
     color: black;
 }
 
@@ -122,7 +118,7 @@ body {
     font-size: 1.5rem;
     border-bottom: 4px solid #1db954;
     display: inline-block;
-    gap: 1rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -131,36 +127,54 @@ body {
 .info-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 
 }
 
 
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
 
-
-.info-container img {
+.info-item img {
     width: 80px;
     margin-bottom: 1rem;
 
 }
 
-.info-container h3 {
-    color: #1db954;
+.info-item h3 {
+    color: var(--color-brand);
+    margin-bottom: 0.5rem;
 
 }
 
-.info-container p {
+.info-item p {
     color: #b3b3b3;
 }
 
 .promo {
-    background-color: #1db954;
-
+    background-color: var(--color-brand);
     color: white;
     padding: 3rem 1rem;
     margin: 2rem;
 
+}
+
+.promo h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-decoration: underline;
+    margin-bottom: 2rem;
+
+}
+
+.promo p,
+.promo-item p {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.6;
 }
 
 .promo-layout {
@@ -170,51 +184,102 @@ body {
 
 }
 
-.promo-item {
-    margin-bottom: 1.5rem;
-}
-
-
-.promo-layout article {
+.promo-content {
     display: flex;
     flex-direction: column;
-    /*column on mobile*/
-    gap: 3rem;
-
-
-}
-
-.promo p {
-    width: 100%;
-    padding: 3rem 0;
-
+    gap: 2rem;
 }
 
 
-
-.promo h2 {
-    text-decoration: underline;
-    padding: 2rem;
-
-}
 
 .promo-item h3 {
-    margin-bottom: 1rem;
-
+    margin-bottom: 0.5rem;
 }
 
-.separation {
-    display: none;
 
 
-}
 
+
+.separation,
 .app-image img {
     display: none;
-    width: 50%;
+
 
 }
+
+
+
+
+@media (min-width: 768px) {
+    /*TABLET*/
+
+    .hero-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .info-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .info-item {
+        flex: 0 0 45%;
+        min-width: 0;
+    }
+
+    .promo h2 {
+        font-size: 2rem;
+    }
+
+    .promo p,
+    .promo-item p {
+        font-size: 1.25rem;
+    }
+
+    .promo-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .promo-content {
+        flex: 1;
+        max-width: 420px;
+    }
+
+    .app-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .app-image img {
+        display: block;
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .separation {
+        display: flex;
+        flex: 0 0 90px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .separation img {
+        width: 70px;
+    }
+}
+
 @media (min-width: 1024px) {
+    /*DESKTOP*/
 
     .nav__toggle {
         display: none;
@@ -227,46 +292,90 @@ body {
         padding: 0;
     }
 
-    .info-container {
-        flex-direction: row;
-        justify-content: space-around;
-        max-width: 1200px;
+    .hero {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.75rem;
+    }
+
+    .hero-content {
+        max-width: 800px;
         margin: 0 auto;
     }
 
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 5%;
+    }
+
     .info-item {
-        flex: 1;
+        flex: 0 0 32%;
+        min-width: 0;
+        text-align: center;
+    }
+    .info h2{
+        font-size: 2.5rem;
+    }
+    .info p{
+        font-size: 1.5rem;
     }
 
     .promo-layout {
         flex-direction: row;
         align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .promo-content {
+        flex: 1;
+        max-width: 420px;
+    }
+
+    .promo h2 {
+        font-size: 2.3rem;
+    }
+
+    .promo p,
+    .promo-item p {
+        font-size: 1.5rem;
+    }
+
+
+    .separation {
+        display: flex;
+        flex: 0 0 90px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .separation img {
+        width: 70px;
+    }
+
+    .app-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .app-image img {
         display: block;
-    }
-}
-
-@media (min-width: 768px) {   /*TABLET*/
-
-    .info-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .info-item {
-        flex: 0 0 45%;
-    }
-
-    .promo-layout {
-        gap: 4rem;
-    }
-
-    .hero-content {
-        max-width: 600px;
-        margin: 0 auto;
+        width: 100%;
+        max-width: 380px;
     }
 }

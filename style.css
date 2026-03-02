@@ -214,11 +214,7 @@ body {
     width: 50%;
 
 }
-
 @media (min-width: 1024px) {
-
-
-
 
     .nav__toggle {
         display: none;
@@ -229,108 +225,48 @@ body {
         flex-direction: row;
         background: none;
         padding: 0;
-        transition: all 0.3s ease;
-    }
-
-    .navbar {
-        position: relative;
-    }
-
-    .nav__toggle:hover {
-        color: var(--color-brand);
-    }
-
-    .hero {
-        width: 100%;
-        min-height: 600px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        padding: 0 1rem;
-    }
-
-    .hero-content {
-        width: 100%;
-
-
-    }
-
-
-    .info h2 {
-        font-size: 2.5rem;
-        border-bottom: 4px solid #1db954;
-        display: inline-block;
-
-
-
     }
 
     .info-container {
-        display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
-        padding: 2rem 0;
         max-width: 1200px;
         margin: 0 auto;
     }
 
-    .promo-content {
-        padding: 6rem 2rem;
-        margin: 2rem;
-
+    .info-item {
+        flex: 1;
     }
-
 
     .promo-layout {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
-        gap: 3rem;
-    }
-
-    .promo-layout article {
-        flex: 1;
-        max-width: 420px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
-
-
-    }
-
-    .promo-item {
-        margin-bottom: 0;
-    }
-
-    .separation {
-        display: flex;
-        flex: 0 0 90px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .separation img {
-        width: 70px;
-    }
-
-
-
-    .app-image {
-        flex: 1;
-        display: flex;
-
-        justify-content: flex-end;
-
     }
 
     .app-image img {
-        width: 100%;
-        max-width: 380px;
         display: block;
+    }
+}
+
+@media (min-width: 768px) {   /*TABLET*/
+
+    .info-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .info-item {
+        flex: 0 0 45%;
+    }
+
+    .promo-layout {
+        gap: 4rem;
+    }
+
+    .hero-content {
+        max-width: 600px;
+        margin: 0 auto;
     }
 }

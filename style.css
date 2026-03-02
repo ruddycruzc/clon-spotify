@@ -7,7 +7,7 @@
 
 
 body {
-    font-family: url((https://fonts.google.com/specimen/Montserrat))
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -26,6 +26,7 @@ body {
     align-items: center;
     padding: 1rem;
     width: 100%;
+    background-color:white;
 
 }
 
@@ -40,7 +41,6 @@ body {
 .menu a {
     text-decoration: none;
     color: black;
-    font-weight: 500;
 
 
 }
@@ -65,7 +65,7 @@ body {
 }
 
 .hero-p p {
-    width: 100;
+    width: 100%;
     margin: 0;
     display: block;
     text-align: center;
@@ -80,7 +80,7 @@ body {
 }
 
 .info h2 {
-    
+
     position: relative;
 
     font-size: 1.5rem;
@@ -127,12 +127,19 @@ body {
 
 }
 
+.promo-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+}
+
 .promo-item {
     margin-bottom: 1.5rem;
 }
 
 
-.article {
+.promo article {
     display: flex;
     flex-direction: column;
     /*column on mobile*/
@@ -173,30 +180,37 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        align-content: flex-end;
-    }
+    
 
 
 
     .hamburger {
         display: none;
     }
-    .menu{
-        display: flex;
+
+    .menu {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        gap: 2rem;
+        background: none;
+        width: auto;
+        padding: 0
 
     }
+    .menu a {
+    color:black;
+    }
 
-    
+
+
     .hero {
         width: 100%;
         min-height: 500px;
         display: flex;
         align-items: center;
         text-align: center;
-        padding:     0 1rem;
+        padding: 0 1rem;
     }
 
     .hero-content {
@@ -223,43 +237,62 @@ body {
         padding: 2rem 0;
     }
 
-    .article {
+    .promo {
+        padding: 6rem 2rem;
+        margin: 2rem;
+
+    }
+
+
+    .promo-layout {
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        
-        /*Centrarlo verticalmente*/
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .promo-layout article {
+        flex: 1;
+        max-width: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         gap: 2rem;
 
 
     }
 
-    .article p {
-        width: 40%;
-
+    .promo-item {
+        margin-bottom: 0;
     }
 
     .separation {
         display: flex;
-        width: 10%;
+        flex: 0 0 90px;
         justify-content: center;
+        align-items: center;
     }
 
     .separation img {
-        display: block;
-        width: 60px;
+        width: 70px;
     }
 
+
+
     .app-image {
-        display: block;
+        flex: 1;
+        display: flex;
 
         justify-content: flex-end;
-        width: 40%;
+
     }
 
     .app-image img {
-        display: block;
         width: 100%;
-        max-width: 350px;
+        max-width: 380px;
+        display: block;
     }
 }

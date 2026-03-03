@@ -53,7 +53,7 @@ Quise practicar **Flexbox**, **media queries** y hacer que todo se vea **bonito 
 ---
 
 ## 🌐 URL del proyecto desplegado
-[Ver proyecto online]() 🚀  
+[Ver proyecto online](https://github.com/ruddycruzc/clon-spotify.git) 🚀  
 
 ---
 

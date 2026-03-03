@@ -40,7 +40,8 @@ Quise practicar **Flexbox**, **media queries** y hacer que todo se vea **bonito 
 - A **dominar Flexbox** y alinear columnas como un jefe.  
 - A usar `flex: 0 0 32%` para que las columnas no se rompan en desktop.  
 - Que el **orden de los media queries importa** más de lo que crees 😅  
-- Cómo usar `clamp()` para textos que escalen bonito en todas las pantallas.  
+- Cómo usar `clamp()` para textos que escalen bonito en todas las pantallas. 
+- Que `scroll-behavior: smooth` hace que el scroll sea suave y elegante.
 
 ---
 
